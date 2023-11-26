@@ -17,7 +17,7 @@ do_clone()
 
 do_clone_all()
 {
-    do_clone "ffmpeg"     "https://github.com/FFmpeg/FFmpeg.git"
+    #do_clone "ffmpeg"     "https://github.com/FFmpeg/FFmpeg.git"
     #do_clone "fribidi"    "http://anongit.freedesktop.org/git/fribidi/fribidi.git"
     do_clone "libass"     "https://github.com/libass/libass.git"
     do_clone "libplacebo" "https://github.com/haasn/libplacebo.git"
@@ -96,7 +96,7 @@ checkout_all()
 {
     set -ex
     do_clone_all
-    checkout ffmpeg $checkout_ffmpeg
+    #checkout ffmpeg $checkout_ffmpeg
     #$checkout fribidi $checkout_fribidi
     checkout libass $checkout_libass
     checkout libplacebo $checkout_libplacebo
