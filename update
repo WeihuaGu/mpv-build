@@ -17,11 +17,10 @@ do_clone()
 
 do_clone_all()
 {
-    do_clone "ffmpeg"     "https://github.com/FFmpeg/FFmpeg.git"
-    #do_clone "fribidi"    "http://anongit.freedesktop.org/git/fribidi/fribidi.git"
-    do_clone "libass"     "https://github.com/libass/libass.git"
-    do_clone "libplacebo" "https://github.com/haasn/libplacebo.git"
-    do_clone "mpv"        "https://github.com/mpv-player/mpv.git"
+    do_clone "ffmpeg"     "git@github.com:Kwiboo/FFmpeg.git"
+    do_clone "libass"     "git@github.com:libass/libass.git"
+    do_clone "libplacebo" "git@github.com:libplacebo.git"
+    do_clone "mpv"        "git@github.com:mpv-player/mpv.git"
 }
 
 do_gitmaster()
@@ -85,7 +84,7 @@ checkout()
 }
 
 # fallback targets: release/master/@foo if no config file
-checkout_ffmpeg=master
+checkout_ffmpeg=v4l2-request-n6.1
 #checkout_fribidi=release
 checkout_libass=master
 checkout_libplacebo=master
@@ -120,7 +119,7 @@ shift
 # allow checkout master/release without checking the config files
 case "$1" in
     --master)
-        checkout_ffmpeg="master -"
+        checkout_ffmpeg="v4l2-request-n6.1 -"
         #checkout_fribidi="master -"
         checkout_libass="master -"
         checkout_libplacebo="master -"
